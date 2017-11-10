@@ -1,0 +1,198 @@
+/*
+
+# Functional And Responsive Template
+version 0.0.1
+
+- license: MIT
+- author: Tommy Hogins
+- website: https://github.com/tomhodgins/fartcss
+
+Requires EQCSS.js
+
+*/
+
+/* Width Breakpoints */
+@element [min-width-100] and (min-width: 100px) {
+  $this { eval('getAttribute("min-width-100")') }
+}
+@element [min-width-200] and (min-width: 200px) {
+  $this { eval('getAttribute("min-width-200")') }
+}
+@element [min-width-300] and (min-width: 300px) {
+  $this { eval('getAttribute("min-width-300")') }
+}
+@element [min-width-400] and (min-width: 400px) {
+  $this { eval('getAttribute("min-width-400")') }
+}
+@element [min-width-500] and (min-width: 500px) {
+  $this { eval('getAttribute("min-width-500")') }
+}
+@element [min-width-600] and (min-width: 600px) {
+  $this { eval('getAttribute("min-width-600")') }
+}
+@element [min-width-700] and (min-width: 700px) {
+  $this { eval('getAttribute("min-width-700")') }
+}
+@element [min-width-800] and (min-width: 800px) {
+  $this { eval('getAttribute("min-width-800")') }
+}
+@element [min-width-900] and (min-width: 900px) {
+  $this { eval('getAttribute("min-width-900")') }
+}
+@element [min-width-1000] and (min-width: 1000px) {
+  $this { eval('getAttribute("min-width-1000")') }
+}
+@element [max-width-100] and (max-width: 100px) {
+  $this { eval('getAttribute("max-width-100")') }
+}
+@element [max-width-200] and (max-width: 200px) {
+  $this { eval('getAttribute("max-width-200")') }
+}
+@element [max-width-300] and (max-width: 300px) {
+  $this { eval('getAttribute("max-width-300")') }
+}
+@element [max-width-400] and (max-width: 400px) {
+  $this { eval('getAttribute("max-width-400")') }
+}
+@element [max-width-500] and (max-width: 500px) {
+  $this { eval('getAttribute("max-width-500")') }
+}
+@element [max-width-600] and (max-width: 600px) {
+  $this { eval('getAttribute("max-width-600")') }
+}
+@element [max-width-700] and (max-width: 700px) {
+  $this { eval('getAttribute("max-width-700")') }
+}
+@element [max-width-800] and (max-width: 800px) {
+  $this { eval('getAttribute("max-width-800")') }
+}
+@element [max-width-900] and (max-width: 900px) {
+  $this { eval('getAttribute("max-width-900")') }
+}
+@element [max-width-1000] and (max-width: 1000px) {
+  $this { eval('getAttribute("max-width-1000")') }
+}
+
+/* Height Breakpoints */
+@element [min-height-100] and (min-height: 100px) {
+  $this { eval('getAttribute("min-height-100")') }
+}
+@element [min-height-200] and (min-height: 200px) {
+  $this { eval('getAttribute("min-height-200")') }
+}
+@element [min-height-300] and (min-height: 300px) {
+  $this { eval('getAttribute("min-height-300")') }
+}
+@element [min-height-400] and (min-height: 400px) {
+  $this { eval('getAttribute("min-height-400")') }
+}
+@element [min-height-500] and (min-height: 500px) {
+  $this { eval('getAttribute("min-height-500")') }
+}
+@element [min-height-600] and (min-height: 600px) {
+  $this { eval('getAttribute("min-height-600")') }
+}
+@element [min-height-700] and (min-height: 700px) {
+  $this { eval('getAttribute("min-height-700")') }
+}
+@element [min-height-800] and (min-height: 800px) {
+  $this { eval('getAttribute("min-height-800")') }
+}
+@element [min-height-900] and (min-height: 900px) {
+  $this { eval('getAttribute("min-height-900")') }
+}
+@element [min-height-1000] and (min-height: 1000px) {
+  $this { eval('getAttribute("min-height-1000")') }
+}
+@element [max-height-100] and (max-height: 100px) {
+  $this { eval('getAttribute("max-height-100")') }
+}
+@element [max-height-200] and (max-height: 200px) {
+  $this { eval('getAttribute("max-height-200")') }
+}
+@element [max-height-300] and (max-height: 300px) {
+  $this { eval('getAttribute("max-height-300")') }
+}
+@element [max-height-400] and (max-height: 400px) {
+  $this { eval('getAttribute("max-height-400")') }
+}
+@element [max-height-500] and (max-height: 500px) {
+  $this { eval('getAttribute("max-height-500")') }
+}
+@element [max-height-600] and (max-height: 600px) {
+  $this { eval('getAttribute("max-height-600")') }
+}
+@element [max-height-700] and (max-height: 700px) {
+  $this { eval('getAttribute("max-height-700")') }
+}
+@element [max-height-800] and (max-height: 800px) {
+  $this { eval('getAttribute("max-height-800")') }
+}
+@element [max-height-900] and (max-height: 900px) {
+  $this { eval('getAttribute("max-height-900")') }
+}
+@element [max-height-1000] and (max-height: 1000px) {
+  $this { eval('getAttribute("max-height-1000")') }
+}
+
+/* Children Breakpoints */
+@element [min-children-1] and (min-children: 1) {
+  $this { eval('getAttribute("min-children-1")') }
+}
+@element [min-children-2] and (min-children: 2) {
+  $this { eval('getAttribute("min-children-2")') }
+}
+@element [min-children-3] and (min-children: 3) {
+  $this { eval('getAttribute("min-children-3")') }
+}
+@element [min-children-4] and (min-children: 4) {
+  $this { eval('getAttribute("min-children-4")') }
+}
+@element [min-children-5] and (min-children: 5) {
+  $this { eval('getAttribute("min-children-5")') }
+}
+@element [min-children-6] and (min-children: 6) {
+  $this { eval('getAttribute("min-children-6")') }
+}
+@element [min-children-7] and (min-children: 7) {
+  $this { eval('getAttribute("min-children-7")') }
+}
+@element [min-children-8] and (min-children: 8) {
+  $this { eval('getAttribute("min-children-8")') }
+}
+@element [min-children-9] and (min-children: 9) {
+  $this { eval('getAttribute("min-children-9")') }
+}
+@element [min-children-10] and (min-children: 10) {
+  $this { eval('getAttribute("min-children-10")') }
+}
+@element [max-children-1] and (max-children: 1) {
+  $this { eval('getAttribute("max-children-1")') }
+}
+@element [max-children-2] and (max-children: 2) {
+  $this { eval('getAttribute("max-children-2")') }
+}
+@element [max-children-3] and (max-children: 3) {
+  $this { eval('getAttribute("max-children-3")') }
+}
+@element [max-children-4] and (max-children: 4) {
+  $this { eval('getAttribute("max-children-4")') }
+}
+@element [max-children-5] and (max-children: 5) {
+  $this { eval('getAttribute("max-children-5")') }
+}
+@element [max-children-6] and (max-children: 6) {
+  $this { eval('getAttribute("max-children-6")') }
+}
+@element [max-children-7] and (max-children: 7) {
+  $this { eval('getAttribute("max-children-7")') }
+}
+@element [max-children-8] and (max-children: 8) {
+  $this { eval('getAttribute("max-children-8")') }
+}
+@element [max-children-9] and (max-children: 9) {
+  $this { eval('getAttribute("max-children-9")') }
+}
+@element [max-children-10] and (max-children: 10) {
+  $this { eval('getAttribute("max-children-10")') }
+}

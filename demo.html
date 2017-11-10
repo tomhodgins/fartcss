@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<meta charset=utf-8>
+<meta name=viewport content="width=device-width, initial-scale=1">
+<title>fart.css demo</title>
+
+<link href=fart.css rel=stylesheet>
+<script src=http://elementqueries.com/EQCSS.js></script>
+
+<style>
+  * {
+    box-sizing: border-box;
+  }
+  div {
+    margin: 1em;
+    padding: 1em;
+    font-size: 14pt;
+    border: 1px solid rgba(0,0,0,.3);
+  }
+  section div {
+    height: 75vh;
+  }
+</style>
+
+<h1>fart.css demo</h1>
+
+<h2>Width-based element queries</h2>
+
+<div
+  min-width-300="background: red"
+  min-width-600="background: lime"
+  min-width-900="background: blue"
+>I change based on my width</div>
+
+<h2>Height-based element queries</h2>
+
+<section>
+  <div
+    min-height-200="background: red"
+    min-height-400="background: lime"
+    min-height-600="background: blue"
+  >I change based on my height</div>
+</section>
+
+<h2>Child-based element queries</h2>
+
+<button onclick="list.innerHTML += '<li>child'">Add Child</button>
+<button onclick="list.children[list.children.length-1].remove()">Remove Child</button>
+
+<ul id=list
+  min-children-1="background: red"
+  min-children-3="background: lime"
+  min-children-5="background: blue"
+>
+  <li>child
+</ul>

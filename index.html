@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<meta charset=utf-8>
+<meta name=viewport content="width=device-width, initial-scale=1">
+<title>Fart CSS</title>
+
+<style>
+  * {
+    box-sizing: border-box;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-kerning: auto;
+  }
+  html {
+    font-size: 12pt;
+    line-height: 1.4;
+    font-weight: 400;
+    font-family: sans-serif;
+  }
+  body {
+    padding: 1em;
+    margin: 0 auto;
+    max-width: 800px;
+  }
+  img[src*=svg] {
+    display: block;
+    max-width: 300px;
+    margin: 4em auto 2em;
+  }
+  code,
+  pre,
+  blockquote {
+    padding: .1em .3em;
+    background: rgba(0,0,0,.1);
+  }
+  code,
+  pre {
+    font-family: monospace;
+  }
+  pre {
+    margin: 2em 0;
+    padding: 1em;
+    white-space: pre-wrap;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    margin: 1em 0 .5em 0;
+    line-height: 1.2;
+    letter-spacing: -.02em;
+  }
+  footer {
+    opacity: .4;
+    padding: 2em 0;
+    text-align: center;
+    transition: opacity .2s ease-in-out;
+  }
+  footer:hover {
+    opacity: 1;
+  }
+  p,
+  li {
+    font-size: 14pt;
+  }
+  @media (min-width: 600px) {
+    h1 { font-size: 300%; }
+    h2 { font-size: 200%; }
+    h3 { font-size: 160%; }
+    h4 { font-size: 140%; }
+    h5 { font-size: 120%; }
+    h6 { font-size: 110%; }
+  }
+</style>
+
+<h1>Functional And Responsive Template</h1>
+<h2>Inspired by TailwindCSS</h2>
+
+<p><code>fart.css</code> is a small set of utility classes to help with responsive web design that leverage <a href=https://github.com/eqcss/eqcss>EQCSS</a> to allow authors to set element-based breakpoints (using element queries and container queries).</p>
+
+<p>The framework introduces a number of HTML attributes that can be used anywhere which are composed of three parts:
+
+<ul>
+  <li>min or max
+  <li>condition being queried
+  <li>breakpoint
+</ul>
+
+<p>This means when writing styles for a breakpoint you want to have happen when an element reaches a width of at least 500px, you could add the attribute <code>min-width-500=""</code> to your element. Any CSS properties set to the value of this attribute will apply when the breakpoint is true. In the following example, our <code>div</code> element would turn blue when it was wider than 500px:</p>
+
+<pre>&lt;div min-width-500="background: blue">fart.css demo&lt;/div></pre>
+
+<p>This is because in our <code>fart.css</code> stylesheet there's the following EQCSS element query:</p>
+
+<pre>@element [min-width-500] and (min-width: 500px) {
+  $this { eval('getAttribute("min-width-500")') }
+}</pre>
+
+<p>This means whenever the <code>(min-width: 500px)</code> breakpoint is true for any element in the page with a <code>[min-width-500]</code> attribute, the value of that attribute <code>eval('getAttribute("min-width-500")')</code> gets used as the content of a rule for <code>$this</code>, which refers to each individual element matching the breakpoint separately.</p>
+
+<h2>Available Attributes</h2>
+
+<h3>Width-based</h3>
+<ul>
+  <li><code>min-width-100</code>
+  <li><code>min-width-200</code>
+  <li><code>min-width-300</code>
+  <li><code>min-width-400</code>
+  <li><code>min-width-500</code>
+  <li><code>min-width-600</code>
+  <li><code>min-width-700</code>
+  <li><code>min-width-800</code>
+  <li><code>min-width-900</code>
+  <li><code>min-width-1000</code>
+  <li><code>max-width-100</code>
+  <li><code>max-width-200</code>
+  <li><code>max-width-300</code>
+  <li><code>max-width-400</code>
+  <li><code>max-width-500</code>
+  <li><code>max-width-600</code>
+  <li><code>max-width-700</code>
+  <li><code>max-width-800</code>
+  <li><code>max-width-900</code>
+  <li><code>max-width-1000</code>
+</ul>
+
+<h3>Height-based</h3>
+<ul>
+  <li><code>min-height-100</code>
+  <li><code>min-height-200</code>
+  <li><code>min-height-300</code>
+  <li><code>min-height-400</code>
+  <li><code>min-height-500</code>
+  <li><code>min-height-600</code>
+  <li><code>min-height-700</code>
+  <li><code>min-height-800</code>
+  <li><code>min-height-900</code>
+  <li><code>min-height-1000</code>
+  <li><code>max-height-100</code>
+  <li><code>max-height-200</code>
+  <li><code>max-height-300</code>
+  <li><code>max-height-400</code>
+  <li><code>max-height-500</code>
+  <li><code>max-height-600</code>
+  <li><code>max-height-700</code>
+  <li><code>max-height-800</code>
+  <li><code>max-height-900</code>
+  <li><code>max-height-1000</code>
+</ul>
+
+<h3>Children-based</h3>
+<ul>
+  <li><code>min-children-1</code>
+  <li><code>min-children-2</code>
+  <li><code>min-children-3</code>
+  <li><code>min-children-4</code>
+  <li><code>min-children-5</code>
+  <li><code>min-children-6</code>
+  <li><code>min-children-7</code>
+  <li><code>min-children-8</code>
+  <li><code>min-children-9</code>
+  <li><code>min-children-10</code>
+  <li><code>max-children-1</code>
+  <li><code>max-children-2</code>
+  <li><code>max-children-3</code>
+  <li><code>max-children-4</code>
+  <li><code>max-children-5</code>
+  <li><code>max-children-6</code>
+  <li><code>max-children-7</code>
+  <li><code>max-children-8</code>
+  <li><code>max-children-9</code>
+  <li><code>max-children-10</code>
+</ul>
+
+<h3>Links</h3>
+
+<ul>
+  <li><strong>Website:</strong> <a href=https://github.com/tomhodgins/fartcss>github.com/tomhodgins/fartcss</a>
+  <li><strong>Demo:</strong> <a href=demo.html>demo.html</a>
+</ul>
+
+<footer>Made with &hearts; by <a href=http://twitter.com/innovati>@innovati</a></footer>
